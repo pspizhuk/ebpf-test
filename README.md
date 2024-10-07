@@ -37,7 +37,7 @@ go get github.com/cilium/ebpf/cmd/bpf2go
 ```console
 go generate
 ```
-5. Update, if needed, network interface *eth0* in [https://github.com/pspizhuk/ebpf-test/blob/master/main.go#L33](main.go) to any is active on local machine (check via `ifconfig`)
+5. Update, if needed, network interface *eth0* in [https://github.com/pspizhuk/ebpf-test/blob/master/main.go#L33](https://github.com/pspizhuk/ebpf-test/blob/master/main.go#L33) to any is active on local machine (check via `ifconfig`)
 
 6. Compile and run
 ```console
