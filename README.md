@@ -20,28 +20,28 @@ C source file should have top directive `//go:build ignore` to be ignored by gol
 
 1. Init module
 ```console
-$ go mod init ebpf-test
+go mod init ebpf-test
 ```
 
 2. Add sums and requirements
 ```console
-$ go mod tidy
+go mod tidy
 ```
 
 3. Get dependency 
 ```console
-$ go get github.com/cilium/ebpf/cmd/bpf2go
+go get github.com/cilium/ebpf/cmd/bpf2go
 ```
 
 4. Generate (make sure *gen.go* has EOL)
-```markdown
-$ go generate
+```console
+go generate
 ```
-5. Update, if needed, network interface *eth0* in **main.go** to any is active on local machine (check via `ifconfig`)
+5. Update, if needed, network interface *eth0* in [https://github.com/pspizhuk/ebpf-test/blob/master/main.go#L33](main.go) to any is active on local machine (check via `ifconfig`)
 
 6. Compile and run
 ```console
-$ $ go build && sudo ./ebpf-test
+go build && sudo ./ebpf-test
 ```
 ### Output
 
@@ -55,11 +55,11 @@ $ $ go build && sudo ./ebpf-test
 
 7. For iterations, use
 ```console
-$ go generate && go build && sudo ./ebpf-test
+go generate && go build && sudo ./ebpf-test
 ```
 
 ## See also
 
 ```console
-$ man bpf
+man bpf
 ```
